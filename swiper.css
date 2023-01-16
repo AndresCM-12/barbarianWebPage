@@ -1,0 +1,38 @@
+:root {
+  --background-white: #fff;
+  --background-black: #000;
+  --background-grey: #212121;
+  --background-grey-secondary: #757575;
+  --background-green: #897a49;
+  --background-green-secondary: #716540;
+  --background-orange: #fd9e27;
+
+  --padding: 38px;
+
+  --h1: 4.2rem;
+  --h2: 3rem;
+  --p: 18px;
+}
+
+/* Products swiper */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.mySwiper .swiper-slide {
+  width: 300px;
+  height: 100%;
+  background-color: #fd9e27;
+  transition: width 0.5s ease-in-out;
+}
+/* Products swiper */
+
+/* MarcasSwiper */
+.mySwiperMarcas .swiper-slide {
+    width: 200px;
+    height: 100%;
+    background-color: transparent;
+    border: 3px solid #717171 !important;
+  }
+/* MarcasSwiper */
