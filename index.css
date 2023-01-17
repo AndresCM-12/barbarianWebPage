@@ -19,6 +19,10 @@ html {
   scroll-behavior: smooth;
   min-width: 375px;
 }
+h1 {
+  font-family: "Archivo Black", sans-serif;
+  text-transform: uppercase;
+}
 
 :root {
   --background-white: #fff;
@@ -155,10 +159,13 @@ header .menu--wrapper img {
   color: var(--background-white);
   font-size: var(--h1);
   font-weight: 400;
+  line-height: 38px;
 }
 #MainBanner .mainbanner--text-wrapper p {
   color: var(--background-white);
   font-size: var(--p);
+  text-transform: uppercase;
+  margin-top: 8px;
 }
 #MainBanner .mainbanner--right-container {
   width: 36%;
@@ -224,9 +231,13 @@ header .menu--wrapper img {
 #ShowProducts .ShowProducts--right-wrapper h1 {
   font-size: var(--h1);
   font-weight: 400;
+  line-height: 20px;
 }
 #ShowProducts .ShowProducts--right-wrapper .text--wrapper {
   padding-top: 68px;
+}
+#ShowProducts .ShowProducts--right-wrapper .text--wrapper h1 {
+  line-height: 30px;
 }
 #ShowProducts .ShowProducts--right-wrapper .callToAction {
   display: grid;
@@ -255,6 +266,7 @@ header .menu--wrapper img {
   color: var(--background-white);
   font-size: var(--h1);
   font-weight: 400;
+  line-height: 38px;
 }
 #QuienesSomos .QuienesSomos--text {
   display: flex;
@@ -278,7 +290,7 @@ header .menu--wrapper img {
   justify-content: center;
 }
 #Marcas h1 {
-  font-size: 250px;
+  font-size: 21vw !important;
   font-weight: 400;
   color: #eaeaea;
   position: absolute;
@@ -447,12 +459,22 @@ footer .Footer--float p {
 /* ----- Footer ----- */
 
 /* ----- Media Queries ----- */
+@media screen and (max-width: 1400px) {
+  #Marcas .Marcas-swiper--container {
+    width: 87%;
+  }
+}
 @media screen and (max-width: 1060px) {
   #Marcas h1 {
     font-size: calc(100px - 10%);
   }
   #Marcas .Marcas-swiper--wrapper {
     width: 65%;
+  }
+}
+@media screen and (max-width: 959px) {
+  #Marcas .Marcas-swiper--container {
+    width: 76%;
   }
 }
 @media screen and (max-width: 925px) {
@@ -493,12 +515,21 @@ footer .Footer--float p {
   #MainBanner .mainbanner--right-container {
     width: 100%;
   }
+  #Marcas .Marcas-swiper--container {
+    width: 80%;
+  }
 }
 @media screen and (max-width: 475px) {
   header {
     padding-inline: 10px;
   }
 
+  #MainBanner .mainbanner--text-wrapper h1 {
+    font-size: 3rem;
+  }
+  #MainBanner .mainbanner--text-wrapper p {
+    font-size: 1.2rem;
+  }
   #ShowProducts .ShowProducts--rectanle {
     display: none;
   }

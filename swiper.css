@@ -24,7 +24,9 @@
   width: 300px;
   height: 100%;
   transition: width 0.5s ease-in-out;
-  padding: 45px;
+  padding: 45px 20px;
+  position: relative;
+  background: transparent!important;
 }
 .mySwiper .product-wrapper {
   color: var(--background-white);
@@ -43,11 +45,21 @@
 .mySwiper .product-wrapper .button--wrapper {
   display: flex;
   column-gap: 20px;
+  display: none;
 }
-.mySwiper .product-wrapper img {
+
+.mySwiper .swiper-slide img{
   object-fit: cover;
   width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: brightness(0.4);
 }
+
+
 /* Products swiper */
 
 /* MarcasSwiper */
