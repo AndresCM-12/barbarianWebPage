@@ -13,6 +13,25 @@
     <link rel="stylesheet" href="./swiper.css" />
   </head>
   <body>
+    <div id="MenuNavBar">
+      <div class="closeMenu" id="CloseMenu">
+        <img src="./assets/close.png" alt="closeMenu" />
+      </div>
+      <ul>
+        <a href="#ShowProducts">
+          <li>TIENDA</li>
+        </a>
+        <a href="#QuienesSomos">
+          <li>QUIENES SOMOS</li>
+        </a>
+        <a href="#Marcas">
+          <li>MARCAS</li>
+        </a>
+        <a href="#Contacto">
+          <li>CONTACTO</li>
+        </a>
+      </ul>
+    </div>
     <!-- Header -->
     <header>
       <div class="logo--wrapper">
@@ -273,8 +292,8 @@
           </a>
         </ul>
       </nav>
-      <div class="menu--wrapper">
-        <img src="./assets/menu.png" alt="">
+      <div class="menu--wrapper" id="OpenMenu">
+        <img src="./assets/menu.png" alt="" />
       </div>
     </header>
     <!-- Header -->
@@ -887,6 +906,7 @@
       </section>
       <!-- Contacto -->
     </main>
+
     <footer>
       <div class="Footer--float">
         <div>
@@ -1131,11 +1151,12 @@
             </g>
           </svg>
         </div>
-        <p>@Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>@Lorem ipsum</p>
       </div>
       <div class="Footer--left"></div>
       <div class="Footer--right"></div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
     <script>
@@ -1151,7 +1172,6 @@
 
           if (index === 0) {
             slide.style.backgroundColor = "var(--background-green)";
-            console.log("index", index);
           }
         });
       };
@@ -1181,7 +1201,6 @@
       });
 
       swiper.on("slideChange", function () {
-        console.log("slide change", swiper.realIndex);
         changeWidthTo(swiper.realIndex);
       });
     </script>
@@ -1200,6 +1219,27 @@
           nextEl: "#Marcas .arrow.right",
           prevEl: "#Marcas .arrow",
         },
+      });
+    </script>
+
+    <script>
+      const $openMenu = document.querySelector("#OpenMenu");
+      const $closeMenu = document.querySelector("#CloseMenu");
+      window.addEventListener("load", (event) => {
+        $openMenu.addEventListener("click", (event) => {
+          document.querySelector("#MenuNavBar").style.left = "0%";
+        });
+
+        $closeMenu.addEventListener("click", (event) => {
+          document.querySelector("#MenuNavBar").style.left = "100%";
+        });
+
+        const $list = document.querySelectorAll("#MenuNavBar a");
+        $list.forEach((item) => {
+          item.addEventListener("click", (event) => {
+            document.querySelector("#MenuNavBar").style.left = "100%";
+          });
+        });
       });
     </script>
   </body>
