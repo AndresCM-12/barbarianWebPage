@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Barbarian</title>
+    <link rel="icon" type="image/x-icon" href="/assets/icons/BTS_isotipo.svg" />
     <link rel="stylesheet" href="./index.css" />
     <link
       rel="stylesheet"
@@ -18,7 +19,7 @@
     />
     <link rel="stylesheet" href="./swiper.css" />
   </head>
-  <body>
+  <body class="fade-in">
     <div id="MenuNavBar">
       <div class="closeMenu" id="CloseMenu">
         <img src="./assets/close.png" alt="closeMenu" />
@@ -816,7 +817,12 @@
                     </g>
                   </svg>
                 </div>
-                <p>Dirección</p>
+                <p>
+                  <span style="font-weight: 700"> Dirección: <br /> </span>
+                  República de Ecuador 221 <br />
+                  Panamericana <br />
+                  Chihuahua Chihuahua <br />
+                </p>
               </div>
               <div class="text">
                 <div class="icon">
@@ -834,15 +840,22 @@
                     />
                   </svg>
                 </div>
-                <p>Teléfono</p>
+                <p>
+                  <span style="font-weight: 700">Teléfono</span>
+                  <br />
+                  614 266 3026
+                </p>
               </div>
             </div>
           </div>
-          <form>
-            <input type="text" placeholder="Nombre" />
-            <input type="text" placeholder="Email" />
-            <input class="email" type="text" placeholder="Mensaje" />
-            <button>Enviar</button>
+          <form
+            action="https://formsubmit.co/javiermagana.mail@gmail.com"
+            method="POST"
+          >
+            <input type="text" name="name" placeholder="Nombre" required />
+            <input type="email" name="email"  placeholder="Email" required />
+            <input class="email" name="subject" type="text" placeholder="Mensaje" required />
+            <button type="submit">Enviar</button>
           </form>
         </div>
       </section>
@@ -1093,7 +1106,7 @@
             </g>
           </svg>
         </div>
-        <p>@Lorem ipsum</p>
+        <p>@Barbarian 2023</p>
       </div>
       <div class="Footer--left"></div>
       <div class="Footer--right"></div>
@@ -1140,6 +1153,11 @@
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+        speed: 1000,
+        autoplay: {
+          delay: 8500,
+          disableOnInteraction: false,
+        },
       });
 
       swiper.on("slideChange", function () {
@@ -1153,6 +1171,7 @@
         slidesPerView: "auto",
         spaceBetween: 45,
         watchSlidesProgress: true,
+        speed: 1000,
         autoplay: {
           delay: 5500,
           disableOnInteraction: false,
@@ -1182,6 +1201,13 @@
             document.querySelector("#MenuNavBar").style.left = "100%";
           });
         });
+      });
+    </script>
+
+    <script>
+      const $button = document.querySelector("#ShowProducts .callToAction");
+      $button.addEventListener('click', ()=>{
+        location.href = '/#Contacto';
       });
     </script>
   </body>
